@@ -64,7 +64,8 @@ static ApplicationController *sharedInstance = nil;
 		shouldQuit = YES;
 
 		BOOL isTesting = NSClassFromString(@"XCTestCase") != nil;
-		if (!isTesting) {
+		BOOL updatesDisabled = [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"GasMaskDisableUpdates"] boolValue];
+		if (!isTesting && !updatesDisabled) {
 			_updaterController = [[SPUStandardUpdaterController alloc]
 								  initWithStartingUpdater:YES
 								  updaterDelegate:nil

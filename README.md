@@ -45,3 +45,30 @@ A great source of curated hosts files can be found at https://github.com/StevenB
 
 ## Building Gas Mask
 Gas Mask can be built with Xcode 15 or later.
+
+### Personal Apple Silicon DMG
+
+Install the full Xcode application and open it once to finish setup (Command
+Line Tools alone are insufficient). Then run from this repository:
+
+```sh
+bash build-arm-dmg.sh
+```
+
+This builds Release for arm64, disables the upstream updater in the packaged
+app, ad-hoc signs the app and its embedded components, and creates
+`build/Gas-Mask-0.8.7-arm64-personal.dmg` plus a SHA-256 checksum. The version in
+the filename is read from the built app. Build products are in
+`build/arm64/Build/Products/Release`. Existing hosts files and preferences are
+not modified by the build.
+
+For Xcode outside `/Applications/Xcode.app`, set `DEVELOPER_DIR` to its
+`Contents/Developer` directory. No global `xcode-select` change is needed.
+
+The DMG is for personal use and is not Developer ID signed or notarized. Copy
+the app into Applications before launching it. On first use, macOS may ask for
+permission to open it, and Gas Mask may request administrator authorization to
+modify the hosts file. Verify hosts switching on your Mac before relying on it.
+
+To build only the ARM app, run `bash build-arm.sh`. To package an already signed
+app, run `bash Release/create-dmg.sh /path/to/Application.app /path/to/output.dmg`.

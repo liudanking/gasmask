@@ -1231,7 +1231,7 @@
 				PRODUCT_NAME = "Gas Mask";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Swift/GasMask-Bridging-Header.h";
-				SWIFT_VERSION = 5.9;
+				SWIFT_VERSION = 5;
 			};
 			name = Debug;
 		};
@@ -1265,7 +1265,7 @@
 				PRODUCT_NAME = "Gas Mask";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Swift/GasMask-Bridging-Header.h";
-				SWIFT_VERSION = 5.9;
+				SWIFT_VERSION = 5;
 			};
 			name = Release;
 		};
@@ -1353,7 +1353,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ee.clockwise.gmask.tests;
 				PRODUCT_NAME = "Gas Mask Tests";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.9;
+				SWIFT_VERSION = 5;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gas Mask.app/Contents/MacOS/Gas Mask";
 			};
 			name = Debug;
@@ -1375,7 +1375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ee.clockwise.gmask.tests;
 				PRODUCT_NAME = "Gas Mask Tests";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.9;
+				SWIFT_VERSION = 5;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gas Mask.app/Contents/MacOS/Gas Mask";
 			};
 			name = Release;
