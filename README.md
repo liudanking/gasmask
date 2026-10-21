@@ -48,6 +48,11 @@ Gas Mask can be built with Xcode 15 or later.
 
 ### Personal Apple Silicon DMG
 
+The prebuilt [Gas Mask 0.8.7 ARM64 personal DMG](Release/0.8.7/Gas-Mask-0.8.7-arm64-personal.dmg)
+and its [SHA-256 checksum](Release/0.8.7/Gas-Mask-0.8.7-arm64-personal.dmg.sha256)
+are included in this repository. To verify after downloading both files, run
+`shasum -a 256 -c Gas-Mask-0.8.7-arm64-personal.dmg.sha256` in their directory.
+
 Install the full Xcode application and open it once to finish setup (Command
 Line Tools alone are insufficient). Then run from this repository:
 
